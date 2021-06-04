@@ -1,0 +1,114 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-06-04T12:21:05.064Z",
+        "line": 11,
+        "name": "Verify if place is sucessfully added using the add place api",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-place-is-sucessfully-added-using-the-add-place-api;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1552254800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Add Place payload with \"green street\",\"English\" and \"World trade centre\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"green street\"",
+                  "offset": 23
+                },
+                {
+                  "val": "\"English\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"World trade centre\"",
+                  "offset": 52
+                }
+              ],
+              "location": "PlaceValidationStepDefinitions.addPlacePayloadWithAnd(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.spec(ValidatableResponseOptionsImpl.java:288)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$spec(ValidatableResponseImpl.groovy)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:101)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1217)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.spec(ValidatableResponseImpl.groovy:76)\r\n\tat io.restassured.internal.ValidatableResponseImpl.spec(ValidatableResponseImpl.groovy)\r\n\tat stepdefinitions.PlaceValidationStepDefinitions.userCallsWithPostHttpRequest(PlaceValidationStepDefinitions.java:28)\r\n\tat ✽.user calls \"AddPlaceApi\" with post http request(file:src/test/java/features/place_validations.feature:6)\r\n",
+              "duration": 2701624400,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "user calls \"AddPlaceApi\" with post http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AddPlaceApi\"",
+                  "offset": 11
+                }
+              ],
+              "location": "PlaceValidationStepDefinitions.userCallsWithPostHttpRequest(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20300,
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "the Api call is success with status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 41
+                }
+              ],
+              "location": "PlaceValidationStepDefinitions.theApiCallIsSuccessWithStatusCode(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10000,
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "PlaceValidationStepDefinitions.inResponseBodyIs(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@current"
+          }
+        ]
+      }
+    ],
+    "name": "Validating place Api\u0027s",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/place_validations.feature",
+    "tags": []
+  }
+]
